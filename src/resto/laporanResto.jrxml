@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="226" pageHeight="842" columnWidth="201" leftMargin="14" rightMargin="11" topMargin="0" bottomMargin="0" uuid="b9be36a4-08e9-49ff-a003-f78dd268539a">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="no_transaksi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from transaksi ]]>
+	</queryString>
+	<field name="ID_TRANSAKSI" class="java.lang.String"/>
+	<field name="ID_PESANAN" class="java.lang.String"/>
+	<field name="ID_PEGAWAI" class="java.lang.String"/>
+	<field name="ID_PELANGGAN" class="java.lang.String"/>
+	<field name="TOTAL_BAYAR" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="11" width="100" height="20" uuid="3c4e5262-be27-4a4a-99ce-36d1793da635"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Restoran Mini]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="12" width="100" height="20" uuid="b6156b35-23e1-4a92-a658-41789e44404b"/>
+				<text><![CDATA[No_Transaksi : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="12" width="100" height="20" uuid="c4dccd58-0a8b-4317-9611-c73eca0920dc"/>
+				<textFieldExpression><![CDATA[$F{ID_TRANSAKSI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="32" width="100" height="20" uuid="cf1266db-455b-4c4b-8358-416ac298035a"/>
+				<textFieldExpression><![CDATA[$F{ID_PESANAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="52" width="100" height="20" uuid="545498b5-07ce-4fb4-a587-bcaa6db315fa"/>
+				<textFieldExpression><![CDATA[$F{ID_PELANGGAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="72" width="100" height="20" uuid="73badafd-4277-4a72-93da-1aa5e895863f"/>
+				<textFieldExpression><![CDATA[$F{TOTAL_BAYAR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="32" width="100" height="20" uuid="bb184ac8-c615-4d2c-a748-7176751332d9"/>
+				<text><![CDATA[id_pesanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="100" height="20" uuid="a72ab052-1b63-49b9-afab-0d010853d5e9"/>
+				<text><![CDATA[id_pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="100" height="20" uuid="f8823ddc-5dbe-4f47-89e2-d599a183334b"/>
+				<text><![CDATA[total bayar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
