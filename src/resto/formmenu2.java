@@ -62,7 +62,7 @@ public class formmenu2 extends javax.swing.JInternalFrame {
     }
     
     public void tampil_menu2(){
-        Object[]baris = {"ID Pesanan", "ID Menu"};
+        Object[]baris = {"ID Pesanan", "ID Menu", "Nama Menu"};
         tabmode= new DefaultTableModel(null, baris);
         jTable1.setModel(tabmode);
         String sql = "select Menu2.ID_Pesanan, Menu2.ID_Menu, Menu.Nama_Menu from Menu, Menu2 where "
